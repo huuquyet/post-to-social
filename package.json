@@ -1,0 +1,11 @@
+{
+  "name": "post-to-social",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "^1.1.4",
+    "typescript": "^5.4.5"
+  }
+}
