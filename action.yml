@@ -1,0 +1,12 @@
+name: "Post to social networks"
+description: "A typescript action that post an image to social networks"
+author: huuquyet
+
+# Add your action's branding here. This will appear on the GitHub Marketplace. Icons from https://feathericons.com/
+branding:
+  icon: "image"
+  color: "blue"
+
+runs:
+  using: 'node20'
+  main: dist/index.js

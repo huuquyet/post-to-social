@@ -1,10 +1,33 @@
 {
   "name": "post-to-social",
-  "description": "",
+  "description": "A typescript action that post an image to social networks",
+  "version": "0.1.0",
+  "repository": "git@github.com:huuquyet/post-to-social",
+  "author": "huuquyet <huuquyetng@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/huuquyet/post-to-social/issues"
+  },
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "private": true,
   "type": "module",
-  "module": "src/index.ts",
+  "scripts": {
+    "bundle": "bun lint && bun package",
+    "clean": "git clean -xdf",
+    "lint": "bunx @biomejs/biome check --write .",
+    "package": "bunx ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package:watch": "bunx package -- --watch"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "got": "^14.4.1",
+    "oauth-1.0a": "^2.2.6"
+  },
   "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
     "@types/bun": "^1.1.4",
     "typescript": "^5.4.5"
   }
